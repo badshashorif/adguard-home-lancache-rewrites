@@ -1,0 +1,447 @@
+http:
+  pprof:
+    port: 6060
+    enabled: false
+  address: 0.0.0.0:8888
+  session_ttl: 720h
+users:
+  - name: dotinternet
+    password: $2a$10$ryZiBZrAnK0F02C/suidw.0YPC08/c3Q90qRM/eumLDVw6waHzpxS
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: ""
+theme: auto
+dns:
+  bind_hosts:
+    - 0.0.0.0
+  port: 53
+  anonymize_client_ip: false
+  ratelimit: 0
+  ratelimit_subnet_len_ipv4: 32
+  ratelimit_subnet_len_ipv6: 56
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+    - https://dns.cloudflare.com/dns-query
+    - tls://dns.google
+    - https://dns.google/dns-query
+    - https://dns10.quad9.net:443/dns-query
+  upstream_dns_file: ""
+  bootstrap_dns:
+    - 9.9.9.10
+    - 149.112.112.10
+    - 2620:fe::10
+    - 2620:fe::fe:10
+  fallback_dns:
+    - 8.8.8.8
+    - 1.1.1.1
+  upstream_mode: load_balance
+  fastest_timeout: 1s
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+    - version.bind
+    - id.server
+    - hostname.bind
+  trusted_proxies:
+    - 127.0.0.0/8
+    - ::1/128
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  cache_optimistic: false
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet:
+    custom_ip: ""
+    enabled: false
+    use_custom: false
+  max_goroutines: 300
+  handle_ddr: true
+  ipset: []
+  ipset_file: ""
+  bootstrap_prefer_ipv6: false
+  upstream_timeout: 10s
+  private_networks: []
+  use_private_ptr_resolvers: false
+  local_ptr_upstreams: []
+  use_dns64: false
+  dns64_prefixes: []
+  serve_http3: false
+  use_http3_upstreams: false
+  serve_plain_dns: true
+  hostsfile_enabled: true
+tls:
+  enabled: false
+  server_name: ns2.lc.dotinternetbd.com
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 853
+  port_dnscrypt: 0
+  dnscrypt_config_file: ""
+  allow_unencrypted_doh: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+  strict_sni_check: false
+querylog:
+  dir_path: ""
+  ignored: []
+  interval: 1h
+  size_memory: 1000
+  enabled: true
+  file_enabled: true
+statistics:
+  dir_path: ""
+  ignored: []
+  interval: 24h
+  enabled: true
+filters: []
+whitelist_filters: []
+user_rules: []
+dhcp:
+  enabled: false
+  interface_name: ""
+  local_domain_name: lan
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+filtering:
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_services:
+    schedule:
+      time_zone: UTC
+    ids: []
+  protection_disabled_until: null
+  safe_search:
+    enabled: false
+    bing: true
+    duckduckgo: true
+    google: true
+    pixabay: true
+    yandex: true
+    youtube: true
+  blocking_mode: default
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  rewrites:
+    - domain: cache.lancache.net
+      answer: 172.16.172.10
+    - domain: v16m.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: v16m.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: v9.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: v9.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: v9e.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: v9e.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: ns1.lc.dotinternetbd.com
+      answer: 172.16.172.10
+    - domain: 14.172.16.172.in-addr.arpa
+      answer: ns2.lc.dotinternetbd.com
+    - domain: ns2.lc.dotinternetbd.com
+      answer: 172.16.172.14
+    - domain: 172.16.172.14
+      answer: ns2.lc.dotinternetbd.com
+    - domain: mb3admin.com
+      answer: 59.153.100.166
+    - domain: '*.mb3admin.com'
+      answer: 59.153.100.166
+    - domain: speedtest.com.sg.prod.hosts.ooklaserver.net
+      answer: 59.153.100.90
+    - domain: dflix.live
+      answer: 172.16.172.166
+    - domain: www.dflix.live
+      answer: 172.16.172.166
+    - domain: v16-tttv.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: v16-tttv.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: p16-va.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: p16-va.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: v16-cla.tiktokcdn.com
+      answer: 154.85.74.168
+    - domain: v16-cla.tiktokcdn.com
+      answer: 154.85.74.169
+    - domain: in-ovh-mumbai-01-10g-1.nperf.net
+      answer: 59.153.100.90
+    - domain: sg-ovh-singapore-01-10g-1.nperf.net
+      answer: 59.153.100.90
+    - domain: filedelivery.nexusmods.com
+      answer: cache.lancache.net
+    - domain: origin-a.akamaihd.net
+      answer: cache.lancache.net
+    - domain: lvlt.cdn.ea.com
+      answer: cache.lancache.net
+    - domain: cdn-patch.swtor.com
+      answer: cache.lancache.net
+    - domain: cdn.zaonce.net
+      answer: cache.lancache.net
+    - domain: patches.totemarts.services
+      answer: cache.lancache.net
+    - domain: patches.totemarts.games
+      answer: cache.lancache.net
+    - domain: ccs.cdn.wup.shop.nintendo.net
+      answer: cache.lancache.net
+    - domain: ccs.cdn.wup.shop.nintendo.net.edgesuite.net
+      answer: cache.lancache.net
+    - domain: geisha-wup.cdn.nintendo.net
+      answer: cache.lancache.net
+    - domain: geisha-wup.cdn.nintendo.net.edgekey.net
+      answer: cache.lancache.net
+    - domain: idbe-wup.cdn.nintendo.net
+      answer: cache.lancache.net
+    - domain: idbe-wup.cdn.nintendo.net.edgekey.net
+      answer: cache.lancache.net
+    - domain: ecs-lp1.hac.shop.nintendo.net
+      answer: cache.lancache.net
+    - domain: receive-lp1.dg.srv.nintendo.net
+      answer: cache.lancache.net
+    - domain: '*.wup.shop.nintendo.net'
+      answer: cache.lancache.net
+    - domain: '*.wup.eshop.nintendo.net'
+      answer: cache.lancache.net
+    - domain: '*.hac.lp1.d4c.nintendo.net'
+      answer: cache.lancache.net
+    - domain: '*.hac.lp1.eshop.nintendo.net'
+      answer: cache.lancache.net
+    - domain: pls.patch.daybreakgames.com
+      answer: cache.lancache.net
+    - domain: live.patcher.elderscrollsonline.com
+      answer: cache.lancache.net
+    - domain: lancache.steamcontent.com
+      answer: cache.lancache.net
+    - domain: assetcdn.101.arenanetworks.com
+      answer: cache.lancache.net
+    - domain: assetcdn.102.arenanetworks.com
+      answer: cache.lancache.net
+    - domain: assetcdn.103.arenanetworks.com
+      answer: cache.lancache.net
+    - domain: dl2.wargaming.net
+      answer: cache.lancache.net
+    - domain: wg.gcdn.co
+      answer: cache.lancache.net
+    - domain: wgus-wotasia.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wot-ak.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wot-gc.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wot-se.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wot-cdx.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wows-ak.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wows-gc.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wows-se.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wows-cdx.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wowp-ak.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wowp-gc.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wowp-se.wargaming.net
+      answer: cache.lancache.net
+    - domain: dl-wowp-cdx.wargaming.net
+      answer: cache.lancache.net
+    - domain: wgus-woteu.wargaming.net
+      answer: cache.lancache.net
+    - domain: l3cdn.riotgames.com
+      answer: cache.lancache.net
+    - domain: worldwide.l3cdn.riotgames.com
+      answer: cache.lancache.net
+    - domain: riotgamespatcher-a.akamaihd.net
+      answer: cache.lancache.net
+    - domain: riotgamespatcher-a.akamaihd.net.edgesuite.net
+      answer: cache.lancache.net
+    - domain: '*.dyn.riotcdn.net'
+      answer: cache.lancache.net
+    - domain: patchcdn.pathofexile.com
+      answer: cache.lancache.net
+    - domain: content.warframe.com
+      answer: cache.lancache.net
+    - domain: cdn1.epicgames.com
+      answer: cache.lancache.net
+    - domain: cdn2.epicgames.com
+      answer: cache.lancache.net
+    - domain: cdn.unrealengine.com
+      answer: cache.lancache.net
+    - domain: cdn1.unrealengine.com
+      answer: cache.lancache.net
+    - domain: cdn2.unrealengine.com
+      answer: cache.lancache.net
+    - domain: cdn3.unrealengine.com
+      answer: cache.lancache.net
+    - domain: download.epicgames.com
+      answer: cache.lancache.net
+    - domain: download2.epicgames.com
+      answer: cache.lancache.net
+    - domain: download3.epicgames.com
+      answer: cache.lancache.net
+    - domain: download4.epicgames.com
+      answer: cache.lancache.net
+    - domain: epicgames-download1.akamaized.net
+      answer: cache.lancache.net
+    - domain: fastly-download.epicgames.com
+      answer: cache.lancache.net
+    - domain: cloudflare.epicgamescdn.com
+      answer: cache.lancache.net
+    - domain: cdn-11.eft-store.com
+      answer: cache.lancache.net
+    - domain: cl-453343cd.gcdn.co
+      answer: cache.lancache.net
+    - domain: '*.cdn.ubi.com'
+      answer: cache.lancache.net
+    - domain: level3.nwhttppatch.crypticstudios.com
+      answer: cache.lancache.net
+    - domain: dist.blizzard.com
+      answer: cache.lancache.net
+    - domain: dist.blizzard.com.edgesuite.net
+      answer: cache.lancache.net
+    - domain: blizzard.vo.llnwd.net
+      answer: cache.lancache.net
+    - domain: blzddist1-a.akamaihd.net
+      answer: cache.lancache.net
+    - domain: blzddist2-a.akamaihd.net
+      answer: cache.lancache.net
+    - domain: blzddist3-a.akamaihd.net
+      answer: cache.lancache.net
+    - domain: level3.blizzard.com
+      answer: cache.lancache.net
+    - domain: nydus.battle.net
+      answer: cache.lancache.net
+    - domain: edge.blizzard.top.comcast.net
+      answer: cache.lancache.net
+    - domain: cdn.blizzard.com
+      answer: cache.lancache.net
+    - domain: '*.cdn.blizzard.com'
+      answer: cache.lancache.net
+    - domain: cdn-na1.homecomingservers.com
+      answer: cache.lancache.net
+    - domain: cdn-na2.homecomingservers.com
+      answer: cache.lancache.net
+    - domain: cdn-na3.homecomingservers.com
+      answer: cache.lancache.net
+    - domain: cdn-eu1.homecomingservers.com
+      answer: cache.lancache.net
+    - domain: patch-dl.ffxiv.com
+      answer: cache.lancache.net
+    - domain: assets1.xboxlive.com
+      answer: cache.lancache.net
+    - domain: assets2.xboxlive.com
+      answer: cache.lancache.net
+    - domain: xbox-mbr.xboxlive.com
+      answer: cache.lancache.net
+    - domain: assets1.xboxlive.com.nsatc.net
+      answer: cache.lancache.net
+    - domain: xvcf1.xboxlive.com
+      answer: cache.lancache.net
+    - domain: xvcf2.xboxlive.com
+      answer: cache.lancache.net
+    - domain: d1.xboxlive.com
+      answer: cache.lancache.net
+    - domain: gs2.ww.prod.dl.playstation.net
+      answer: cache.lancache.net
+    - domain: '*.gs2.ww.prod.dl.playstation.net'
+      answer: cache.lancache.net
+    - domain: '*.gs2.sonycoment.loris-e.llnwd.net'
+      answer: cache.lancache.net
+    - domain: gs2-ww-prod.psn.akadns.net
+      answer: cache.lancache.net
+    - domain: '*.gs2-ww-prod.psn.akadns.net'
+      answer: cache.lancache.net
+    - domain: gs2.ww.prod.dl.playstation.net.edgesuite.net
+      answer: cache.lancache.net
+    - domain: '*.gs2.ww.prod.dl.playstation.net.edgesuite.net'
+      answer: cache.lancache.net
+    - domain: playstation4.sony.akadns.net
+      answer: cache.lancache.net
+    - domain: theia.dl.playstation.net
+      answer: cache.lancache.net
+    - domain: tmdb.np.dl.playstation.net
+      answer: cache.lancache.net
+    - domain: gs-sec.ww.np.dl.playstation.net
+      answer: cache.lancache.net
+    - domain: '*.windowsupdate.com'
+      answer: cache.lancache.net
+    - domain: '*.dl.delivery.mp.microsoft.com'
+      answer: cache.lancache.net
+    - domain: dl.delivery.mp.microsoft.com
+      answer: cache.lancache.net
+    - domain: '*.update.microsoft.com'
+      answer: cache.lancache.net
+    - domain: '*.do.dsp.mp.microsoft.com'
+      answer: cache.lancache.net
+    - domain: '*.microsoft.com.edgesuite.net'
+      answer: cache.lancache.net
+    - domain: amupdatedl.microsoft.com
+      answer: cache.lancache.net
+    - domain: amupdatedl2.microsoft.com
+      answer: cache.lancache.net
+    - domain: amupdatedl3.microsoft.com
+      answer: cache.lancache.net
+    - domain: amupdatedl4.microsoft.com
+      answer: cache.lancache.net
+    - domain: amupdatedl5.microsoft.com
+      answer: cache.lancache.net
+    - domain: patches.rockstargames.com
+      answer: cache.lancache.net
+    - domain: fs.esquireapartmentsltd.com
+      answer: 172.16.172.50
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  filters_update_interval: 1
+  blocked_response_ttl: 10
+  filtering_enabled: true
+  parental_enabled: false
+  safebrowsing_enabled: false
+  protection_enabled: true
+clients:
+  runtime_sources:
+    whois: true
+    arp: true
+    rdns: true
+    dhcp: true
+    hosts: true
+  persistent: []
+log:
+  enabled: true
+  file: ""
+  max_backups: 0
+  max_size: 100
+  max_age: 3
+  compress: false
+  local_time: false
+  verbose: false
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 28

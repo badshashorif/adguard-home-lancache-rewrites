@@ -1,0 +1,322 @@
+[
+    {
+        "Id": "e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198",
+        "Created": "2025-03-05T06:52:12.676394695Z",
+        "Path": "/unbound.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2982604,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-03-05T06:52:13.185412649Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "unhealthy",
+                "FailingStreak": 55,
+                "Log": [
+                    {
+                        "Start": "2025-03-05T13:26:03.465261025+06:00",
+                        "End": "2025-03-05T13:26:13.465847191+06:00",
+                        "ExitCode": -1,
+                        "Output": "Health check exceeded timeout (10s)"
+                    },
+                    {
+                        "Start": "2025-03-05T13:26:43.471154918+06:00",
+                        "End": "2025-03-05T13:26:53.471895249+06:00",
+                        "ExitCode": -1,
+                        "Output": "Health check exceeded timeout (10s)"
+                    },
+                    {
+                        "Start": "2025-03-05T13:27:23.476635317+06:00",
+                        "End": "2025-03-05T13:27:33.477746999+06:00",
+                        "ExitCode": -1,
+                        "Output": "Health check exceeded timeout (10s)"
+                    },
+                    {
+                        "Start": "2025-03-05T13:28:03.487209599+06:00",
+                        "End": "2025-03-05T13:28:13.487583997+06:00",
+                        "ExitCode": -1,
+                        "Output": "Health check exceeded timeout (10s)"
+                    },
+                    {
+                        "Start": "2025-03-05T13:28:43.492907705+06:00",
+                        "End": "2025-03-05T13:28:53.493731941+06:00",
+                        "ExitCode": -1,
+                        "Output": "Health check exceeded timeout (10s)"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:a7778ebb14b25328fc6de5b58ddf5dfe3e0891afec8fd86744995fd8dbcd5b4e",
+        "ResolvConfPath": "/var/lib/docker/containers/e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198/hostname",
+        "HostsPath": "/var/lib/docker/containers/e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198/hosts",
+        "LogPath": "/var/lib/docker/containers/e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198/e68099e1ea3a0433ed49c85cc0a8137a3ffef5621bb3f6e94a4c52bad2f22198-json.log",
+        "Name": "/unbound",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/volume1/data/unbound/unbound:/opt/unbound/etc/unbound:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "unbound_default",
+            "PortBindings": {
+                "5353/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5353"
+                    }
+                ],
+                "5353/udp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5353"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/9ba24a88fa44b404d415cd737f342e673ae3e9acdf2797185ada6b6e0f4bdb71-init/diff:/var/lib/docker/overlay2/b51d79119b4b9e5f81117433852b6dd9afe42b229c4e1df25ffc044e2f08b34f/diff:/var/lib/docker/overlay2/97d0586899536b1955f06a68d15e3f7c752ab42cadb8e8831fba7d78ed353993/diff:/var/lib/docker/overlay2/09a7804eb7b8c9e2a749e5407f0213001eaace704996fb6aa7573a46396a3d99/diff:/var/lib/docker/overlay2/49dae276d4ceb36ca16c5633e93a84804c35f687d3c92407484a956f7e8d0fd0/diff:/var/lib/docker/overlay2/c70c11d5953fd09dc981c903c4cc8ee76ce6f2afad27cd0200b73504e7c62972/diff:/var/lib/docker/overlay2/a0e66f2932087c727cbb571c1d22eed074700e04b440a7252d6863d3c49c39a8/diff:/var/lib/docker/overlay2/630a42d8c027c6f7bad1c5ca2c7a08f4469dafc88ef7433391db92b59712fa58/diff",
+                "MergedDir": "/var/lib/docker/overlay2/9ba24a88fa44b404d415cd737f342e673ae3e9acdf2797185ada6b6e0f4bdb71/merged",
+                "UpperDir": "/var/lib/docker/overlay2/9ba24a88fa44b404d415cd737f342e673ae3e9acdf2797185ada6b6e0f4bdb71/diff",
+                "WorkDir": "/var/lib/docker/overlay2/9ba24a88fa44b404d415cd737f342e673ae3e9acdf2797185ada6b6e0f4bdb71/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/volume1/data/unbound/unbound",
+                "Destination": "/opt/unbound/etc/unbound",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "e68099e1ea3a",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "53/tcp": {},
+                "53/udp": {},
+                "5353/tcp": {},
+                "5353/udp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/unbound/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NAME=unbound",
+                "SUMMARY= is a validating, recursive, and caching DNS resolver.",
+                "DESCRIPTION= is a validating, recursive, and caching DNS resolver."
+            ],
+            "Cmd": [
+                "/unbound.sh"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "drill",
+                    "@127.0.0.1",
+                    "cloudflare.com"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 3
+            },
+            "Image": "mvance/unbound:latest",
+            "Volumes": {
+                "/opt/unbound/etc/unbound": {}
+            },
+            "WorkingDir": "/opt/unbound",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "61f141a263425078973e6da2b20fe493dbc1c9e128a2e0bf30b2b8379863b9d3",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "unbound",
+                "com.docker.compose.project.config_files": "docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/volume1/data/unbound",
+                "com.docker.compose.service": "unbound",
+                "com.docker.compose.version": "1.25.0",
+                "maintainer": "Matthew Vance",
+                "org.opencontainers.image.description": "a validating, recursive, and caching DNS resolver",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.source": "https://github.com/MatthewVance/unbound-docker",
+                "org.opencontainers.image.title": "mvance/unbound",
+                "org.opencontainers.image.url": "https://github.com/MatthewVance/unbound-docker",
+                "org.opencontainers.image.vendor": "Matthew Vance",
+                "org.opencontainers.image.version": ""
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "26920251374fea169b4189381c549abd5116aaddcdbef8e9710ec76386839520",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "53/tcp": null,
+                "53/udp": null,
+                "5353/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5353"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5353"
+                    }
+                ],
+                "5353/udp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5353"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5353"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/26920251374f",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "unbound_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "unbound",
+                        "e68099e1ea3a"
+                    ],
+                    "NetworkID": "133ea2b876c299269790ee531004522bca90a62de730927cbf67d47df5c90814",
+                    "EndpointID": "f2fa47821082f6823c52a1f9f6245daa41ce9e92b70beedf073d698f728225ae",
+                    "Gateway": "192.168.0.1",
+                    "IPAddress": "192.168.0.2",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:c0:a8:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
